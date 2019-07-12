@@ -1,0 +1,22 @@
+<!--pages/index/index.wxml-->
+<view class='musicBox'>
+   <!--  -->
+    <view class='musicBoxTitle'>
+      <text>{{audioList[audioIndex].name}}</text>
+      <view bindtap='goToBeyond'>关于Beyond</view>
+    </view>
+    <!--  -->
+    <view class='musicBoxBg'>
+       <image src='{{audioList[audioIndex].bannerImg}}'></image>
+       <view class='musicBoxBgTitle'>
+         <open-data type="userAvatarUrl"></open-data>
+       </view>
+    
+    </view>
+    <view class='musicBoxBnt'>
+       <view class='musicBoxBnt_back' bindtap='goBack'>上一曲</view>
+       <view class='musicBoxBnt_play' wx:if='{{stopPlay==false}}' bindtap='play'>播放</view>
+       <view class='musicBoxBnt_stop' wx:else bindtap='stop'>暂停</view>
+        <view class='musicBoxBnt_next' bindtap='goNext'>下一曲</view>
+    </view>
+</view>

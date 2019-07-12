@@ -1,0 +1,31 @@
+<!--pages/beyond/beyond.wxml-->
+<view class='beyond'>
+  <view class='beyondTab'>
+    <view data-index='{{index}}' bindtap='tabClick' wx:for="{{tabList}}" wx:key="index" class="{{tabIndex==index?'active':''}}">{{item}}</view>
+  </view>
+  <scroll-view scroll-y='true' class='scrollView'>
+     <view wx:if="{{tabIndex==0}}" class='beyondContent'>
+      <rich-text nodes="{{dataObj.content}}"></rich-text>
+     </view>
+     <view wx:if="{{tabIndex==1}}" class='beyondContent'>
+       <view wx:for='{{dataObj.vocalConcert}}' wx:key="index" class='beyondContentList'>
+          <view>{{item.title}}</view>
+           <view>共演出{{item.number}}场次</view>
+            <view>{{item.time}}</view>
+       </view>
+     </view>
+     <view wx:if="{{tabIndex==2}}" class='beyondContent'>
+        <view wx:for='{{dataObj.prize}}' wx:key="index" class='beyondContentList'>
+            <view>{{item.title}}</view>
+            <view>{{item.time}}年</view>
+        </view>
+     
+     </view>
+     <view wx:if="{{tabIndex==3}}" class='beyondContent'>
+      <view wx:for='{{dataObj.bandPrize}}' wx:key="index" class='beyondContentList'>
+          <view>{{item.title}}</view>
+          <view>{{item.time}}年</view>
+       </view>
+     </view>
+  </scroll-view>
+</view>

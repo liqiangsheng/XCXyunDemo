@@ -1,0 +1,67 @@
+/* pages/beyond/beyond.wxss */
+.beyond{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.beyondTab{
+  width: 100%;
+  display: flex;
+  height: 100rpx;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+.beyondTab view{
+  flex: 1;
+  height: 90rpx;
+  font-size: 26rpx;
+  line-height: 90rpx;
+  text-align: center;
+ 
+}
+.beyondTab .active{
+  border-bottom: 1rpx solid #4395FF;
+}
+.beyondContent{
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.scrollView{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 101rpx;
+  overflow-y: auto;
+}
+.beyondContent rich-text{
+  width: 100%;
+   font-size: 28rpx;
+   line-height:48rpx;
+}
+.beyondContentList{
+  width: 100%;
+  padding: 10rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+.beyondContentList view:first-child{
+  line-height: 48rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #303030;
+  margin-bottom: 10rpx;
+}
+.beyondContentList view:nth-child(2){
+  line-height: 48rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #B80506;
+  margin-bottom: 10rpx;
+}
+.beyondContentList view:last-child{
+  line-height: 48rpx;
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #cccccc;
+}
